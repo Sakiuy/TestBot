@@ -21,6 +21,10 @@ client.on('message', message => {
 
     }
 
+    if (message.content === '-avatar') {
+        message.channel.send(message.author.avatarURL);
+    }
+
     if (message.content === "-command1") {
         message.channel.send("Aucun effet n'est encore attribué a cette commande : 1 !")
         

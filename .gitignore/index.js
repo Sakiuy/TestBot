@@ -15,8 +15,10 @@ client.on('message', message => {
         message.channel.send("►ZENOXIA◄")
         message.channel.send("-help : Afficher l'aide")
         message.channel.send("-ping : Verifier la vitesse du bot")
-        
+        message.channel.sendEmbed('Test Embed')
+
     }
 });
+
 
 client.login('Mzg2ODQ3MzgyMzIwNzA5NjMz.DQmguQ.89dkG31fnQB8DSuMQiYMW7wgKIA');

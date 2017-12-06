@@ -3,10 +3,11 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log(`Logged in as §{client.user.tag}!`);
+    client.user.setGame('Zenoxia | -help')
 });
 
 client.on('message', message => {
-    if (message.equals === '-ping') {
+    if (message.content === '-ping') {
         message.channel.send('Pong!')
     }
 
@@ -18,4 +19,4 @@ client.on('message', message => {
     }
 });
 
-client.login('Mzg3OTU2NTUyNTUzOTg4MTA4.DQmAOg.abBvZBD2TdXOF5YVOIdbHtH4Stw');
+client.login('Mzg2ODQ3MzgyMzIwNzA5NjMz.DQmguQ.89dkG31fnQB8DSuMQiYMW7wgKIA');

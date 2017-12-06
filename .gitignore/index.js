@@ -23,6 +23,7 @@ client.on('message', message => {
 
     if (message.content === '-avatar') {
         client.user.setAvatar(message.author.avatarURL);
+        message.channel.send("L'avatar du bot va etre changé ...")
     }
 
     if (message.content === "-command1") {

@@ -1,9 +1,11 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+var googlesearch = " ";
 
 client.on('ready', () => {
     console.log(`Logged in as §{client.user.tag}!`);
     client.user.setGame('Zenoxia | -help')
+    
 });
 
 client.on('message', message => {
@@ -15,9 +17,36 @@ client.on('message', message => {
         message.channel.send("►ZENOXIA◄")
         message.channel.send("-help : Afficher l'aide")
         message.channel.send("-ping : Verifier la vitesse du bot")
-        message.channel.sendCode("Bon la c'est la bonne")
+        
 
     }
+
+    if (message.content === "-command1") {
+        message.channel.send("Aucun effet n'est encore attribué a cette commande : 1 !")
+        
+    }
+
+    if (message.content === "-command2") {
+        message.channel.send("Aucun effet n'est encore attribué a cette commande : 2 !")
+
+    }
+
+    if (message.content === "-command3") {
+        message.channel.send("Aucun effet n'est encore attribué a cette commande : 3 !")
+
+    }
+
+    if (message.content === "-command4") {
+        message.channel.send("Aucun effet n'est encore attribué a cette commande : 4 !")
+
+    }
+
+    if (message.content === "-command5") {
+        message.channel.send("Aucun effet n'est encore attribué a cette commande : 5 !")
+
+    }
+
+
 });
 
 

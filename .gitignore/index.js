@@ -22,7 +22,7 @@ client.on('message', message => {
     }
 
     if (message.content === '-avatar') {
-        message.channel.send(message.author.avatarURL);
+        client.user.setAvatar(message.author.avatarURL);
     }
 
     if (message.content === "-command1") {

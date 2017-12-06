@@ -15,7 +15,7 @@ client.on('message', message => {
         message.channel.send("►ZENOXIA◄")
         message.channel.send("-help : Afficher l'aide")
         message.channel.send("-ping : Verifier la vitesse du bot")
-        message.channel.sendEmbed('Test Embed')
+        message.channel.sendCode("Bon la c'est la bonne")
 
     }
 });

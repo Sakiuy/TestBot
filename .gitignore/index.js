@@ -16,7 +16,7 @@ client.on('message', message => {
     if (message.content === '-help') {
         message.channel.send("►ZENOXIA◄")
         message.channel.send("-help : Afficher l'aide")
-        message.channel.send("-ping : Verifier la vitesse du bot")
+        message.channel.send("-ping : Repondre par un pong")
         message.channel.send("-avatar : mettre l'avatar du bot a son propre avatar")
         
 
@@ -28,7 +28,9 @@ client.on('message', message => {
     }
 
     if (message.content === "-command1") {
-        message.channel.send("/tts Aucun effet n'est encore attribué a cette commande : 1 !")
+        message.channel.send("Aucun effet n'est encore attribué a cette commande : 2 !", {
+        tts: true
+        })
         
     }
 

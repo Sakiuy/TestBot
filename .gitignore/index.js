@@ -39,6 +39,12 @@ client.on('message', message => {
         message.channel.send('Le bot va quitter votre salon vocal .')
     }
 
+    if (message.content === '-roles') {
+        message.member.voiceChannel.leave()
+        message.channel.send('Vos roles sonts : ')
+        message.channel.send(message.member.roles)
+    }
+
     if (message.content === "-command1") {
         message.channel.send("Aucun effet n'est encore attribué a cette commande : 2 !", {
         tts: true

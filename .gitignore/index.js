@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var googlesearch = " ";
+
 
 client.on('ready', () => {
     console.log(`Logged in as §{client.user.tag}!`);
@@ -42,7 +42,7 @@ client.on('message', message => {
     if (message.content === '-roles') {
         message.member.voiceChannel.leave()
         message.channel.send('Vos roles sonts : ')
-        message.channel.send(message.member.roles)
+        message.channel.send('En developpement !')
     }
 
     if (message.content === "-command1") {

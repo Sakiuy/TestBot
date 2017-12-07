@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var googlesearch = " ";
+
 
 client.on('ready', () => {
     console.log(`Logged in as §{client.user.tag}!`);
@@ -28,11 +28,11 @@ client.on('message', message => {
     }
 
     if (message.content === '-join') {
-        VoiceChannel.join(message.author.VoiceChannel)
+        VoiceChannel.join()
     }
     
     if (message.content === '-quit') {
-        VoiceChannel.leave(message.author.VoiceChannel)
+        VoiceChannel.leave()
     }
 
     if (message.content === "-command1") {

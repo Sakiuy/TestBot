@@ -27,6 +27,14 @@ client.on('message', message => {
         message.channel.send("L'avatar du bot va etre changé ...")
     }
 
+    if (message.content === '-join') {
+        VoiceChannel.join(message.author.VoiceChannel)
+    }
+    
+    if (message.content === '-quit') {
+        VoiceChannel.leave(message.author.VoiceChannel)
+    }
+
     if (message.content === "-command1") {
         message.channel.send("Aucun effet n'est encore attribué a cette commande : 2 !", {
         tts: true

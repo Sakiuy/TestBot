@@ -30,12 +30,12 @@ client.on('message', message => {
     }
 
     if (message.content === '-join') {
-        message.member.voiceChannel.join
+        message.member.voiceChannel.join()
         message.channel.send('Le bot va rejoindre votre salon vocal .')
     }
 
     if (message.content === '-quit') {
-        message.member.voiceChannel.leave
+        message.member.voiceChannel.leave()
         message.channel.send('Le bot va quitter votre salon vocal .')
     }
 

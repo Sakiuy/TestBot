@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-
+var googlesearch = " ";
 
 client.on('ready', () => {
     console.log(`Logged in as §{client.user.tag}!`);
@@ -18,6 +18,8 @@ client.on('message', message => {
         message.channel.send("-help : Afficher l'aide")
         message.channel.send("-ping : Repondre par un pong")
         message.channel.send("-avatar : mettre l'avatar du bot a son propre avatar")
+        message.channel.send("-join : Faire rejoindre le bot à votre salon vocal")
+        message.channel.send("-quit : Faire quitter le bot de votre salon vocal")
         
 
     }
@@ -28,11 +30,13 @@ client.on('message', message => {
     }
 
     if (message.content === '-join') {
-        VoiceChannel.join()
+        message.member.voiceChannel.join
+        message.channel.send('Le bot va rejoindre votre salon vocal .')
     }
-    
+
     if (message.content === '-quit') {
-        VoiceChannel.leave()
+        message.member.voiceChannel.leave
+        message.channel.send('Le bot va quitter votre salon vocal .')
     }
 
     if (message.content === "-command1") {

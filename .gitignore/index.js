@@ -25,9 +25,9 @@ client.on('message', message => {
 
     if (message.content === '-test') {
         var toSplit = message.content.split(" ")
-        message.channel.send('Arg 1 : ' + toSplit[0])
-        message.channel.send('Arg 2 : ' + toSplit[1])
-        message.channel.send('Arg 3 : ' + toSplit[2])
+        message.channel.send(toSplit[0])
+        message.channel.send(toSplit[1])
+        message.channel.send(toSplit[2])
         
     }
 

@@ -21,7 +21,6 @@ client.on('message', message => {
         message.channel.send("-join : Faire rejoindre le bot à votre salon vocal")
         message.channel.send("-quit : Faire quitter le bot de votre salon vocal")
         
-
     }
 
     if (message.content === '-test') {
@@ -33,12 +32,12 @@ client.on('message', message => {
     }
 
     if (message.content === '-join') {
-        message.member.voiceChannel.join()
+        client.voiceChannel.join(message.member.voiceChannelID)
         message.channel.send('Le bot va rejoindre votre salon vocal .')
     }
 
     if (message.content === '-quit') {
-        message.member.voiceChannel.leave()
+        client.voiceChannel.leave(message.member.voiceChannelID)
         message.channel.send('Le bot va quitter votre salon vocal .')
     }
 

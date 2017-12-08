@@ -32,12 +32,18 @@ client.on('message', message => {
     }
 
     if (message.content === '-join') {
-        client.voiceChannel.join(message.member.voiceChannelID)
+        const cID = message.member.voiceChannel;
+        cID.join()
+        .then(connection => console.log('Connected!'))
+        .catch(console.error);
         message.channel.send('Le bot va rejoindre votre salon vocal .')
     }
 
     if (message.content === '-quit') {
-        client.voiceChannel.leave(message.member.voiceChannelID)
+        const cID = message.member.voiceChannel;
+        cID.leave()
+        .then(connection => console.log('Disconnected!'))
+        .catch(console.error);
         message.channel.send('Le bot va quitter votre salon vocal .')
     }
 

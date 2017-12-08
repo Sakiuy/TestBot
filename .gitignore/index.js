@@ -25,8 +25,10 @@ client.on('message', message => {
     }
 
     if (message.content === '-avatar') {
-        client.user.setAvatar(message.author.avatarURL);
-        message.channel.send("L'avatar du bot va etre changé ...")
+        var tosplit = "message.content"
+        var ArrayMessage = tosplit.split(" ")
+        message.channel.send(ArrayMessage)
+        
     }
 
     if (message.content === '-join') {

@@ -25,8 +25,7 @@ client.on('message', message => {
     }
 
     if (message.content === '-avatar') {
-        var toSplit = message.content.split(" ")
-        message.channel.send(toSplit)
+        message.channel.send(message.content.split(" "))
         
     }
 

@@ -1,5 +1,9 @@
+import { constants } from "http2";
+
 const Discord = require("discord.js");
+const discordJsMusic = require("discord.js-music");
 const client = new Discord.Client();
+const token = 'Mzg2ODQ3MzgyMzIwNzA5NjMz.DQmguQ.89dkG31fnQB8DSuMQiYMW7wgKIA';
 
 
 client.on('ready', () => {
@@ -32,11 +36,10 @@ client.on('message', message => {
     }
 
     if (message.content === '-join') {
-        const cID = message.member.voiceChannel;
-        cID.join()
-        .then(connection => console.log('Connected!'))
-        .catch(console.error);
-        message.channel.send('Le bot va rejoindre votre salon vocal .')
+        const playlist = message.guild.playlist;
+        await playlist.add(message.content);
+        return playlist.start(message.member.voiceChannel);
+
     }
 
     if (message.content === '-quit') {
@@ -84,4 +87,4 @@ client.on('message', message => {
 });
 
 
-client.login('Mzg2ODQ3MzgyMzIwNzA5NjMz.DQmguQ.89dkG31fnQB8DSuMQiYMW7wgKIA');
+client.login(token);

@@ -1,5 +1,3 @@
-import { constants } from "http2";
-
 const Discord = require("discord.js");
 const discordJsMusic = require("discord.js-music");
 const client = new Discord.Client();
@@ -36,18 +34,11 @@ client.on('message', message => {
     }
 
     if (message.content === '-join') {
-        const playlist = message.guild.playlist;
-        await playlist.add(message.content);
-        return playlist.start(message.member.voiceChannel);
-
+        message.channel.send('awagnégné');
     }
 
     if (message.content === '-quit') {
-        const cID = message.member.voiceChannel;
-        cID.leave()
-        .then(connection => console.log('Disconnected!'))
-        .catch(console.error);
-        message.channel.send('Le bot va quitter votre salon vocal .')
+        message.channel.send('awagnégné');
     }
 
     if (message.content === '-roles') {
